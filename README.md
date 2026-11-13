@@ -49,13 +49,27 @@ Itens marcados no HTML com comentários `<!-- PENDENTE: ... -->`:
 Enquanto a graduação e o registro no CRP não estiverem concluídos, o site usa "graduanda em Psicologia"
 e não anuncia serviços psicológicos, conforme o briefing.
 
-## Publicação (GitHub Pages)
+## Publicação (GitHub Pages + domínio próprio)
 
-O site funciona a partir da raiz do repositório. Em **Settings → Pages**, escolha *Deploy from a branch*,
-selecione a branch com o site e a pasta `/ (root)`.
+O site é publicado pelo GitHub Pages a partir da branch `gh-pages` e responde em
+**https://psicologageovanna.com.br** (arquivo `CNAME` na raiz). Toda alteração precisa chegar à `gh-pages`
+para aparecer no ar.
 
-Se o endereço mudar (domínio próprio, por exemplo), atualize as metatags `og:url` e `og:image` no
-`<head>` do `index.html`.
+DNS no Registro.br (modo avançado):
+
+| Tipo | Nome | Dados |
+| --- | --- | --- |
+| A | (vazio) | 185.199.108.153 |
+| A | (vazio) | 185.199.109.153 |
+| A | (vazio) | 185.199.110.153 |
+| A | (vazio) | 185.199.111.153 |
+| AAAA | (vazio) | 2606:50c0:8000::153 |
+| AAAA | (vazio) | 2606:50c0:8001::153 |
+| AAAA | (vazio) | 2606:50c0:8002::153 |
+| AAAA | (vazio) | 2606:50c0:8003::153 |
+| CNAME | www | primol.github.io |
+
+Depois que o DNS propagar, marque **Enforce HTTPS** em Settings → Pages.
 
 ## Acessibilidade e desempenho
 
